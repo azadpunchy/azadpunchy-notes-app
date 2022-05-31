@@ -40,7 +40,7 @@ const userCtrl = {
       // genrate cookie
       const payload = { id: user._id, name: user.uname };
       const token = jwt.sign(payload, process.env.SECRETE_KEY, {
-        expiresIn: "1d",
+        expiresIn: "30d",
       });
       console.log(token);
       res.json({ msg: "Login a User", token });
